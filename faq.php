@@ -179,7 +179,7 @@ if (isset($_POST['send-email'])) {
 
                 <div>
                     <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-adolescents-and-youth
-" target="_blank">Click
+            " target="_blank">Click
                         Here For More Information</a>
                 </div>
             </div>

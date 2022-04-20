@@ -2,7 +2,7 @@
     <div class="footer-item">
         <img src="img/cprc.png" alt="">
         <ul class="footer-item-list">
-            <li>CRPC Kebangsaan KKM</li>
+            <li><strong>CRPC Kebangsaan KKM</strong></li>
             <li>Telephone: 03 8881 0200 / 03 8881 0600</li>
             <li>Whatsapp: +60178429454
             </li>
@@ -15,7 +15,7 @@
     <div class="footer-item">
         <img class="se-flag" src="img/selangor.png" alt="">
         <ul class="footer-item-list">
-            <li>CRPC Selangor</li>
+            <li><strong>CRPC Selangor</strong></li>
             <li>Telephone : 03-5123 7366 / 03-5123 7367</li>
             <li>cprc_sel@moh.gov.my</li>
             <li>Operation time : 8.00 a.m. - 5.00 p.m.
@@ -27,7 +27,7 @@
     <div class="footer-item">
         <img class="ma-flag" src="img/malaysia.png" alt="">
         <ul class="footer-item-list">
-            <li>CRPC KL</li>
+            <li><strong>CRPC KL</strong></li>
             <li>Telephone: 03-2698 3757 / 03-2268 7301</li>
             <li>Email: cprckl@moh.gov.my
             </li>

@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+section {
+  margin: 0px;
+}
 body {
   margin-top: 85px;
   font-family: "Open Sans" !important;
@@ -215,6 +218,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 50px 250px;
+  height: auto;
   width: 100%;
 }
 
@@ -330,7 +334,7 @@ footer {
 }
 
 .faq-form input {
-  width: 400px;
+  min-width: 400px;
   height: 40px;
   margin: 10px 0;
   font-size: 18px;
@@ -339,7 +343,7 @@ footer {
 #enquiry {
   height: 300px !important;
   font-size: 18px;
-  width: 400px;
+  min-width: 400px;
 }
 
 .submit-btn {
@@ -399,7 +403,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px 0;
+  padding: 15px 0;
   padding-right: 30px;
 }
 
@@ -558,6 +562,87 @@ footer {
 }
 /* symptoms ends here */
 
+/* results starts here */
+.results {
+  padding: 50px 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal {
+  width: 100%;
+  min-width: 400px;
+  min-height: 300px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.reveal-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.reveal-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+i.fa-triangle-exclamation {
+  color: #ff3729;
+  font-size: 200px;
+}
+
+i.fa-circle-exclamation {
+  color: #ffc815;
+  font-size: 200px;
+}
+
+i.fa-square-check {
+  color: #2340c4;
+  font-size: 200px;
+}
+
+.danger {
+  background: #f0746b;
+}
+
+.serious {
+  background: #f3eb7e;
+}
+
+.normal {
+  background: #96bbf1;
+}
+
+.results-title {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+  margin: 50px 0px;
+}
+
+.symptom-img {
+  width: 80px;
+  height: 80px;
+}
+
+/* results ends here */
+
 @media all and (max-width: 1200px) {
   /* header starts here */
   nav {
@@ -623,6 +708,7 @@ footer {
   /* footer starts here */
   .footer {
     padding: 50px 100px;
+    min-width: 400px;
   }
 
   .footer-item {
@@ -649,4 +735,112 @@ footer {
   }
 
   /* vaccination ends here */
+
+  /* results starts here */
+  .reveal {
+    padding: 30px;
+    font-size: 20px;
+  }
+  .reveal-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .reveal-right {
+    width: 100%;
+  }
+
+  /* results ends here */
+}
+
+@media all and (max-width: 500px) {
+  /* steps starts here */
+  .steps {
+    padding: 20px 100px;
+  }
+
+  .steps-title,
+  .steps-content {
+    min-width: 300px;
+  }
+
+  .steps-title {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  /* steps ends here */
+
+  /* results starts here */
+  .results {
+    padding: 20px 100px;
+  }
+
+  .results-title,
+  .reveal {
+    min-width: 300px;
+  }
+
+  /* results ends here */
+
+  /* symptoms starts here */
+  .symptoms {
+    padding: 20px 100px;
+  }
+
+  .knowmore-title,
+  .symptoms-title {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .symptoms-title,
+  .symptoms-form {
+    min-width: 300px;
+  }
+
+  /* symptoms ends here */
+
+  /* vaccination starts here */
+  .vaccination {
+    padding: 20px 100px;
+  }
+
+  .vaccination-title {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .vaccination-title,
+  .vaccination-content {
+    min-width: 300px;
+  }
+
+  /* vaccination ends here */
+
+  /* faq starts here */
+  .faq {
+    padding: 20px 100px;
+  }
+
+  #enquiry,
+  .knowmore,
+  .accordion,
+  .faq-title,
+  .faq-form input {
+    min-width: 300px;
+  }
+  .knowmore-title,
+  .faq-title {
+    font-size: 23px;
+  }
+  .accordion {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  /* faq ends here */
+  .footer {
+    width: 100%;
+    min-width: 300px;
+  }
 }
