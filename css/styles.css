@@ -1,0 +1,652 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 85px;
+  font-family: "Open Sans" !important;
+}
+
+body.faq-php {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* header starts here */
+nav {
+  background: white;
+  padding: 5px 250px;
+  border-bottom: 1px solid #64cf83;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 15px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav ul li.items {
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+
+nav ul li.items::after {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #64cf83;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+nav ul li.items.selected::after {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #64cf83;
+  transition: all 0.3s linear;
+  opacity: 1;
+  bottom: 8px;
+}
+
+nav ul li.items:hover::after {
+  opacity: 1;
+  bottom: 8px;
+}
+
+nav ul li.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: default;
+}
+
+nav ul li.spacer {
+  cursor: default;
+  flex: 1;
+}
+
+nav ul li.logo > div:first-child {
+  font-size: 20px;
+}
+
+nav ul li.logo > div:nth-child(2) {
+  color: #64cf83;
+}
+
+nav ul li.logo {
+  font-size: 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+nav ul li a {
+  color: black;
+}
+
+nav ul li:hover a {
+  color: #64cf83;
+}
+
+nav ul li.selected a {
+  color: #64cf83;
+}
+
+.burger a i {
+  font-size: 30px;
+  display: none;
+}
+
+.burger.hide i:before {
+  content: "\f00d";
+}
+
+/* header ends here */
+
+/* footer starts here */
+footer {
+  padding: 50px 250px;
+  height: fit-content;
+  width: 100%;
+  background-color: #64cf83;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-item img {
+  height: 100px;
+  width: 100px;
+}
+
+.footer-item img.se-flag {
+  margin-top: -20px;
+  height: 120px;
+  width: 120px;
+}
+
+.footer-item img.ma-flag {
+  height: 80px;
+  margin-bottom: 20px;
+  width: 120px;
+}
+.footer-item-list {
+  list-style: none;
+}
+
+.footer-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.copyright {
+  width: 100%;
+  font-weight: bold;
+  padding-top: 50px;
+  text-align: center;
+}
+
+/* footer ends here */
+
+/* faq starts here */
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 250px;
+  width: 100%;
+}
+
+.faq-title {
+  align-self: center;
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+}
+
+.accordion {
+  margin-top: 50px;
+  width: 100%;
+  min-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #64cf83;
+}
+
+.accordion_label,
+.accordion_content {
+  padding: 14px 20px;
+}
+
+.accordion_label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: linear 0.1s;
+}
+
+.accordion_label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion_label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  right: 20px;
+  width: 12px;
+  height: 6px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:white;" /></svg>');
+  background-size: contain;
+  transition: transform 0.5s;
+}
+
+.accordion_content {
+  display: block;
+  line-height: 0;
+  padding: 0px;
+  background: white;
+  overflow: hidden;
+  font-size: 0.85em;
+  font-weight: normal;
+  transition: line-height 0.2s linear;
+  color: transparent;
+}
+
+.accordion_content a {
+  color: transparent;
+}
+
+.accordion_input {
+  display: none;
+}
+
+.accordion_input:checked ~ .accordion_content {
+  color: black;
+  display: block;
+  overflow: hidden;
+  padding: 14px 20px;
+  line-height: 1.6;
+  transition: line-height 0.2s linear;
+}
+
+.accordion_input:checked ~ .accordion_content a {
+  color: #64cf83;
+}
+
+.accordion_input:checked ~ .accordion_label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+
+.knowmore {
+  align-self: center;
+  font-weight: bold;
+  width: 100%;
+  min-width: 400px;
+  margin: 50px 0;
+}
+
+.knowmore-title {
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+.faq-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.faq-form label {
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.faq-form input {
+  width: 400px;
+  height: 40px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#enquiry {
+  height: 300px !important;
+  font-size: 18px;
+  width: 400px;
+}
+
+.submit-btn {
+  background: #64cf83 !important;
+  width: 200px;
+  cursor: pointer;
+  font-size: large;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  transition: linear 0.1s;
+  height: 40px;
+}
+
+.submit-btn:hover {
+  background: #5aba76 !important;
+}
+
+.red-text {
+  color: red;
+}
+/* faq ends here */
+
+/* steps starts here */
+.steps {
+  padding: 50px 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps-title {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+  margin-bottom: 50px;
+}
+
+.steps-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 400px;
+  border-radius: 5px;
+  border: 10px solid #64cf83;
+}
+
+.steps-content-item {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+  padding-right: 30px;
+}
+
+.steps-left {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-img {
+  width: 30%;
+  height: auto;
+}
+
+.steps-right {
+  width: 50%;
+}
+
+.steps-right div:first-child {
+  font-size: large;
+  font-weight: bold;
+}
+
+/* steps ends here */
+
+/* vaccination starts here */
+.vaccination {
+  padding: 50px 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vaccination-title {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+  margin-bottom: 50px;
+}
+
+.vaccination-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 400px;
+  border-radius: 5px;
+  border: 10px solid #64cf83;
+  margin-bottom: 50px;
+}
+
+.vac-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.vaccination-content-item {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+  padding-right: 30px;
+  flex-wrap: wrap;
+}
+
+.vaccination-left {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vaccination-left div:first-child {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.vaccination-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.vaccination-right ul {
+  list-style-type: none;
+}
+
+.vaccination-right .list-desc {
+  margin-bottom: 20px;
+}
+.list-title {
+  font-weight: bold;
+}
+
+.vac-img {
+  width: 80%;
+  height: 80%;
+}
+/* vaccination ends here */
+
+/* symptoms starts here */
+.symptoms {
+  padding: 50px 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.symptoms-title {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+  margin-bottom: 50px;
+}
+
+.symptoms-title-2 {
+  font-weight: normal;
+  font-size: 15px;
+  width: 100%;
+}
+
+.symptoms-form {
+  width: 100%;
+  border-radius: 5px;
+  border: 10px solid #64cf83;
+  padding: 20px 30px;
+  min-width: 400px;
+}
+
+.symptoms-form .form-group {
+  margin-bottom: 20px;
+}
+
+#quest {
+  margin-bottom: 5px;
+}
+/* symptoms ends here */
+
+@media all and (max-width: 1200px) {
+  /* header starts here */
+  nav {
+    padding: 0;
+  }
+
+  nav ul {
+    position: relative;
+  }
+
+  nav ul li.logo {
+    width: 100%;
+    border-bottom: 1px solid #64cf83;
+  }
+
+  .burger a i {
+    position: absolute;
+    display: inline;
+    left: 20px;
+    top: 23px;
+  }
+
+  nav ul li.spacer {
+    flex: 0;
+    display: none;
+  }
+
+  nav ul li.items {
+    width: 100%;
+    display: none;
+  }
+
+  nav ul li.items.show {
+    display: block;
+  }
+
+  nav ul li.burger a {
+    transition: 0.2s;
+  }
+
+  body > nav > ul > li:nth-child(4) {
+    margin-top: 15px;
+  }
+
+  nav ul li.items:last-child {
+    margin-bottom: 15px;
+  }
+
+  nav ul li.items:hover {
+    box-shadow: 0 0 5px #64cf83, 0 0 10px #64cf83;
+  }
+
+  nav ul li.items:hover::after {
+    opacity: 0;
+  }
+
+  nav ul li.items.selected::after {
+    display: none;
+  }
+
+  /* header ends here */
+
+  /* footer starts here */
+  .footer {
+    padding: 50px 100px;
+  }
+
+  .footer-item {
+    width: 100%;
+    padding: 25px 25px;
+  }
+  /* footer ends here */
+
+  /* step starts here  */
+  .step-img {
+    width: 45%;
+    height: auto;
+  }
+  /* step ends here  */
+
+  /* vaccination starts here  */
+  .vaccination-left {
+    width: 100%;
+  }
+
+  .vaccination-right {
+    width: 100%;
+    padding: 20px 40px;
+  }
+
+  /* vaccination ends here */
+}
