@@ -59,7 +59,7 @@
             <div class="steps-right">
                 <div>Avoid poorly ventilated spaces and crowds</div>
                 <div>
-                    indoors, bring in fresh air by opening windows and doors, if possible.
+                    If indoors, bring in fresh air by opening windows and doors, if possible.
                 </div>
             </div>
         </div>

@@ -29,8 +29,10 @@ if (isset($_POST['check-result'])) {
 
         <!-- q2 -->
         <div class="form-group">
-            <p id="quest">2. Did you face a problem where you can’t speak or move suddenly these 3 recent days? (Not
-                applicable if you just have other accidents like vehicle accidents)</p>
+            <p id="quest">2. Did you face a problem where you can’t speak or move suddenly these 3 recent days?
+                <strong>(Not
+                    applicable if you just have other accidents like vehicle accidents)</strong>
+            </p>
             <label for="">
                 <input type="radio" name="rq2" value="yes" class="inputRadio" checked> Yes
             </label>
@@ -53,8 +55,9 @@ if (isset($_POST['check-result'])) {
         <!-- q4 -->
         <div class="form-group">
             <p id="quest">4. Can you keep yourself awake during these 3 recent days, in other words, did you face a
-                problem keeping yourself in the awake and sane condition these 3 recent days? (Not applicable if you
-                have hypersomnia)</p>
+                problem keeping yourself in the awake and sane condition these 3 recent days? <strong>(Not applicable if
+                    you
+                    have hypersomnia)</strong></p>
             <label for="">
                 <input type="radio" name="rq4" value="yes" class="inputRadio" checked> Yes
             </label>
@@ -88,7 +91,8 @@ if (isset($_POST['check-result'])) {
 
         <!-- q7 -->
         <div class="form-group">
-            <p id="quest">7. Have you had a fever these last 3 days? (Not to be confused with question 6)</p>
+            <p id="quest">7. Have you had a fever these last 3 days? <strong>(Not to be confused with question
+                    6)</strong></p>
             <label for="">
                 <input type="radio" name="yq1" value="yes" class="inputRadio" checked> Yes
             </label>
@@ -180,8 +184,9 @@ if (isset($_POST['check-result'])) {
         </div>
         <!-- q15 -->
         <div class="form-group">
-            <p id="quest">15. Did you face any digestive problems like nausea, vomit, or diarrhea in the last 3 days?
-                (Not applicable if you are diagnosed with food poisoning)</p>
+            <p id="quest">15. Did you face any digestive problems like nausea, vomit, or diarrhea in the last 3
+                days?<strong>
+                    (Not applicable if you are diagnosed with food poisoning)</strong></p>
             <label for="">
                 <input type="radio" name="bq2" value="yes" class="inputRadio" checked> Yes
             </label>
@@ -192,7 +197,8 @@ if (isset($_POST['check-result'])) {
         <!-- q16 -->
         <div class="form-group">
             <p id="quest">16. Did you face any skin problems like rash, hives, or chickenpox-like lesions these recent 3
-                days? (Not applicable if you have these symptoms a long time ago or you had an allergic) </p>
+                days? <strong>(Not applicable if you have these symptoms a long time ago or you had an allergic)
+                </strong></p>
             <label for="">
                 <input type="radio" name="bq3" value="yes" class="inputRadio" checked> Yes
             </label>
@@ -212,9 +218,11 @@ if (isset($_POST['check-result'])) {
         </div>
         <!-- q18 -->
         <div class="form-group">
-            <p id="quest">18. Did you face any abnormal cardiovascular or blood clotting issues these last 3 days? (Not
-                applicable if your amount of platelets has been diagnosed to be over or under average if you have
-                treatment like cancer treatment or were born with this problem)?</p>
+            <p id="quest">18. Did you face any abnormal cardiovascular or blood clotting issues these last 3 days?
+                <strong>(Not
+                    applicable if your amount of platelets has been diagnosed to be over or under average if you have
+                    treatment like cancer treatment or were born with this problem)</strong>
+            </p>
             <label for="">
                 <input type="radio" name="bq5" value="yes" class="inputRadio" checked> Yes
             </label>
@@ -224,9 +232,11 @@ if (isset($_POST['check-result'])) {
         </div>
         <!-- q19 -->
         <div class="form-group">
-            <p id="quest">19. Have you been diagnosed with happy hypoxia in the last 1 week? (Happy hypoxia is a
-                condition where the patient has dangerously low levels of oxygen in the blood, that should cause reduced
-                consciousness BUT the patient did not show any symptoms related to reduced consciousness)</p>
+            <p id="quest">19. Have you been diagnosed with happy hypoxia in the last 1 week? <strong>(Happy hypoxia is a
+                    condition where the patient has dangerously low levels of oxygen in the blood, that should cause
+                    reduced
+                    consciousness BUT the patient did not show any symptoms related to reduced consciousness)</strong>
+            </p>
             <label for="">
                 <input type="radio" name="bq6" value="yes" class="inputRadio" checked> Yes
             </label>

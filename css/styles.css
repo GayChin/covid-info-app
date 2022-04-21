@@ -665,7 +665,7 @@ footer {
 
 .vac-name {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 20px;
 }
 .vaccination-content-item {
@@ -717,10 +717,16 @@ footer {
 .list-title {
   font-weight: bold;
 }
-
+p {
+  margin-bottom: 0;
+}
 .vac-img {
   width: 80%;
   height: 80%;
+}
+
+.list-title {
+  font-size: 18px;
 }
 /* vaccination ends here */
 
@@ -800,7 +806,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 40%;
 }
 

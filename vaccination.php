@@ -57,11 +57,7 @@
                             <p style="font-weight:bold">
                                 Rare:
                             </p>
-                            Anaphylaxis -> is treatable with epinephrine
-                            <br>
-                            Heart problems -> Seek medical help
-                            <br>
-                            Bell's palsy, a type of temporary facial paralysis
+                            Anaphylaxis, Heart problems, Bell's palsy
                         </div>
                     </li>
                     <li>
@@ -121,11 +117,7 @@
                             <p style="font-weight:bold">
                                 Rare:
                             </p>
-                            Anaphylaxis -> is treatable with epinephrine
-                            <br>
-                            Bell's palsy, a type of temporary facial paralysis
-                            <br>
-                            Heart problems -> Seek medical care
+                            Anaphylaxis, Heart problems, Bell's palsy
                         </div>
                     </li>
                     <li>
