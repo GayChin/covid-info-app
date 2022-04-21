@@ -152,6 +152,208 @@ nav ul li.selected a {
 
 /* header ends here */
 
+/* home starts here */
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.home-title-2 {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+  min-width: 400px;
+  margin: 50px 0px;
+  text-align: center;
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+}
+
+.home-section-1 {
+  padding: 50px 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.home-section-1-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.home-section-1-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.home-photo {
+  width: 60%;
+  height: 60%;
+}
+
+#carouselExampleDark {
+  min-width: 400px !important;
+}
+
+.carousel-img {
+  height: 300px;
+  min-width: 400px;
+  width: 100%;
+}
+
+.home-section-2 {
+  padding: 50px 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #64cf83;
+  width: 100%;
+}
+
+.home-section-3 {
+  padding: 0px 250px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.vid {
+  width: 560px;
+  height: 315px;
+}
+
+.flip-card-container {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  min-width: 400px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  min-width: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 400px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.fa-solid.fa-virus-covid {
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.flip-card-front {
+  color: white;
+  flex-direction: column;
+}
+
+.flip-card-front div {
+  font-weight: bold;
+  font-size: large;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.c1.flip-card-back,
+.c1.flip-card-front {
+  background: #3d989b;
+}
+
+.c2.flip-card-back,
+.c2.flip-card-front {
+  background: #e36e6b;
+}
+
+.c3.flip-card-back,
+.c3.flip-card-front {
+  background: #f7b63c;
+}
+
+.c4.flip-card-back,
+.c4.flip-card-front {
+  background: #132b4f;
+}
+
+.c5.flip-card-back,
+.c5.flip-card-front {
+  background: #3c280b;
+}
+
+.flip-card-back li {
+  text-align: start;
+}
+
+.flip-card-back ul {
+  padding: 30px 50px;
+}
+
+/* home ends here */
+
 /* footer starts here */
 footer {
   padding: 50px 250px;
@@ -655,7 +857,7 @@ i.fa-square-check {
 
   nav ul li.logo {
     width: 100%;
-    border-bottom: 1px solid #64cf83;
+    /* border-bottom: 1px solid #64cf83; */
   }
 
   .burger a i {
@@ -713,6 +915,7 @@ i.fa-square-check {
 
   .footer-item {
     width: 100%;
+    max-width: 300px;
     padding: 25px 25px;
   }
   /* footer ends here */
@@ -751,6 +954,40 @@ i.fa-square-check {
   }
 
   /* results ends here */
+
+  /* home starts here */
+  .home-section-1 {
+    row-gap: 50px;
+  }
+
+  .vid {
+    width: 435px;
+    height: 255px;
+  }
+
+  .home-section-1-left {
+    width: 100%;
+  }
+  .home-section-1-right {
+    width: 100%;
+  }
+
+  .home-photo {
+    width: 80%;
+    height: 80%;
+    min-width: 400px;
+  }
+
+  .w-100 {
+    height: 350px !important;
+  }
+
+  .flip-card-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* home ends here */
 }
 
 @media all and (max-width: 500px) {
@@ -818,11 +1055,53 @@ i.fa-square-check {
 
   /* vaccination ends here */
 
+  /* home starts here */
+  .vid {
+    width: 300px;
+    height: 176px;
+  }
+
+  #carouselExampleDark {
+    min-width: 300px !important;
+  }
+
+  .carousel-img {
+    min-width: 300px;
+  }
+
+  .home-photo,
+  .home-title,
+  .home-title-2 {
+    min-width: 300px !important;
+  }
+
+  .home-section-3,
+  .home-section-2,
+  .home-section-1 {
+    padding: 30px 0px;
+  }
+
+  .w-100 {
+    height: 350px !important;
+  }
+
+  /* home ends here */
+
   /* faq starts here */
   .faq {
     padding: 20px 100px;
   }
 
+  .flip-card-container {
+    column-gap: 0px;
+    min-width: 300px;
+  }
+
+  .flip-card,
+  .flip-card-front,
+  .flip-card-back,
+  .flip-card-inner,
+  .home-title,
   #enquiry,
   .knowmore,
   .accordion,
@@ -839,8 +1118,15 @@ i.fa-square-check {
     font-size: 12px;
   }
   /* faq ends here */
+
   .footer {
     width: 100%;
     min-width: 300px;
+  }
+
+  .footer-item {
+    width: 100%;
+    min-width: 300px;
+    padding: 25px 25px;
   }
 }
