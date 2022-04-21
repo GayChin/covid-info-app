@@ -708,6 +708,7 @@ footer {
 
 .vaccination-right ul {
   list-style-type: none;
+  padding-left: 0px;
 }
 
 .vaccination-right .list-desc {
@@ -844,6 +845,11 @@ i.fa-square-check {
 }
 
 /* results ends here */
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .w-100 {
+    height: 350px !important;
+  }
+}
 
 @media all and (max-width: 1200px) {
   /* header starts here */
@@ -967,6 +973,7 @@ i.fa-square-check {
 
   .home-section-1-left {
     width: 100%;
+    min-width: 500px;
   }
   .home-section-1-right {
     width: 100%;
@@ -1065,7 +1072,8 @@ i.fa-square-check {
     min-width: 300px !important;
   }
 
-  .carousel-img {
+  .home-section-1-left {
+    width: 100%;
     min-width: 300px;
   }
 
