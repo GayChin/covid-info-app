@@ -138,7 +138,7 @@
         <div class="vaccination-content-item">
             <div class="vaccination-left">
                 <div>
-                    <img src="img/jnj.png" class="vac-img">
+                    <img src="img/john.png" class="vac-img">
                 </div>
                 <div class="vac-name">
                     Johnsons & Johnson
