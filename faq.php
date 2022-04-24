@@ -62,14 +62,7 @@ if (isset($_POST['send-email'])) {
 
         $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         try {
-            echo "sending...";
-            $response = $sendgrid->send($sendgrid_email);
-            printf("Response status: %d\n\n", $response->statusCode());
-            $headers = array_filter($response->headers());
-            echo "Response Headers\n\n";
-            foreach ($headers as $header) {
-        echo '- ' . $header . "\n";
-    }
+            $response = $sendgrid->send($sendgrid_email);          
         } catch (Exception $e) {
             echo 'Caught exception: '. $e->getMessage() ."\n";
         }
