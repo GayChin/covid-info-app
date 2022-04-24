@@ -23,7 +23,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="img\green-bg.png" class="d-block w-100" alt="">
+                        <img src="ihttps://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg" class="d-block w-100" alt="">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>Definition</Strong></h5>
                             <p style="text-align:justify;">Covid-19 is the disease caused by a coronavirus, also known
