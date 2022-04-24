@@ -1,22 +1,12 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+declare(strict_types=1);
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+use \SendGrid\Mail\Mail;
 
-$pw = $_ENV['EMAIL_PASSWORD'];
-
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-// echo $pw;
-
+$sendgrid_email = new Mail();
 
 $errors = ['name' => '', 'email' => '', 'enquiry' => ''];
 $email = "";
@@ -25,6 +15,17 @@ $name = "";
 $tempname = "";
 $subject = "COVID-19 Enquiries";
 $message_sent = false;
+$key = getenv('SENDGRID_API_KEY');
+$grip = getenv('DataGrip');
+
+if($key == null){
+    echo "nothing happens";
+}else{
+    echo "halo";
+}
+
+echo $key;
+
 
 if (isset($_POST['send-email'])) {
 
@@ -52,29 +53,40 @@ if (isset($_POST['send-email'])) {
 
     // If there is no errors in the form, redirect to homepage
     if (!array_filter($errors)) {
+        
+        $sendgrid_email->setFrom(
+            "gcyap1227@gmail.com"
+        );
+
+        $sendgrid_email->setSubject(
+            $subject
+        );
+
+        // Replace with your recipient
+        $sendgrid_email->addTo(
+            'gcyap1227@gmail.com',
+        );
+
+        $sendgrid_email->addContent(
+            "From: " , $email,
+            "<br>",
+            $enquiry,
+        );
+
+        $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         try {
-            //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'gcyap1227@gmail.com';                     //SMTP username
-            $mail->Password   = "Tetken100!";                                    //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-            //Recipients
-            $mail->setFrom($email, $name);
-            $mail->addAddress('gcyap1227@gmail.com', 'Gay Chin');     //Add a recipient
-
-            //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $subject;
-            $mail->Body    = "From : " . $email . "<br/>" . $enquiry;
-            $mail->send();
+            echo "sending...";
+            $response = $sendgrid->send($sendgrid_email);
+            printf("Response status: %d\n\n", $response->statusCode());
+            $headers = array_filter($response->headers());
+            echo "Response Headers\n\n";
+            foreach ($headers as $header) {
+        echo '- ' . $header . "\n";
+    }
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo 'Caught exception: '. $e->getMessage() ."\n";
         }
+
         $email = "";
         $enquiry = "";
         $name = "";
