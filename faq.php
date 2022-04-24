@@ -15,7 +15,7 @@ $pw = $_ENV['EMAIL_PASSWORD'];
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
-
+echo $pw;
 
 
 $errors = ['name' => '', 'email' => '', 'enquiry' => ''];
