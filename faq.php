@@ -18,15 +18,6 @@ $message_sent = false;
 $key = getenv('SENDGRID_API_KEY');
 $grip = getenv('DataGrip');
 
-if($key == null){
-    echo "nothing happens";
-}else{
-    echo "halo";
-}
-
-echo $key;
-
-
 if (isset($_POST['send-email'])) {
 
     if (empty($_POST['email'])) {
@@ -67,11 +58,7 @@ if (isset($_POST['send-email'])) {
             'gcyap1227@gmail.com',
         );
 
-        $sendgrid_email->addContent(
-            "From: " , $email,
-            "<br>",
-            $enquiry,
-        );
+        $sendgrid_email->addContent("text/html", "<p>From $email ($name)</p> <br/> $enquiry");
 
         $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         try {
