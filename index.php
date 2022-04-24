@@ -23,7 +23,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="ihttps://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg" class="d-block w-100" alt="">
+                        <img src="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg" class="d-block w-100" alt="">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>Definition</Strong></h5>
                             <p style="text-align:justify;">Covid-19 is the disease caused by a coronavirus, also known
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="img/green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg" class="d-block w-100" alt="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>How did the virus start?</Strong></h5>
                             <p style="text-align:justify;">The first case reported on 1 Dec 2019
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg" class="d-block w-100" alt="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>Why is it called coronavirus?</Strong></h5>
                             <p style="text-align:justify;">“Corona” means crown
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg" class="d-block w-100" alt="https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>How does it spread?</Strong></h5>
                             <p style="text-align:justify;">Through droplets and virus particles when an infected person
