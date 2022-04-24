@@ -23,7 +23,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="img\green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="img/test.png" class="d-block w-100" alt="img/test.png">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>Definition</Strong></h5>
                             <p style="text-align:justify;">Covid-19 is the disease caused by a coronavirus, also known
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="img\green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="img/test.png" class="d-block w-100" alt="img/test.png">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>How did the virus start?</Strong></h5>
                             <p style="text-align:justify;">The first case reported on 1 Dec 2019
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img\green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="img/test.png" class="d-block w-100" alt="img/test.png">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>Why is it called coronavirus?</Strong></h5>
                             <p style="text-align:justify;">“Corona” means crown
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img\green-bg.png" class="d-block w-100" alt="img/green-bg.png">
+                        <img src="img/test.png" class="d-block w-100" alt="img/test.png">
                         <div class="carousel-caption d-md-block">
                             <h5><Strong>How does it spread?</Strong></h5>
                             <p style="text-align:justify;">Through droplets and virus particles when an infected person
@@ -149,7 +149,7 @@
                             <li>First detected in UK in September 2020</li>
                             <li>23 mutations</li>
                             <li> 50% more transmissible than the original strain of coronavirus</li>
-                            <li>Pfizer and green-bg vaccines are effective in preventing Alpha
+                            <li>Pfizer and test vaccines are effective in preventing Alpha
                             </li>
                         </ul>
                     </div>
@@ -173,7 +173,7 @@
                             <li> Delta is 60% more transmissible than Alpha
                             </li>
                             <li>Replace Alpha variant as the dominant strain</li>
-                            <li>Pfizer, green-bg and Johnson&Johnson are protective against hospitalization and able to
+                            <li>Pfizer, test and Johnson&Johnson are protective against hospitalization and able to
                                 neutralize the variant.</li>
                         </ul>
                     </div>
