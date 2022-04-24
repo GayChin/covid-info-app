@@ -74,7 +74,7 @@ if ($redSymptoms >= 2 || $yellowSymptoms >= 5 || $blueSymptoms >= 3) {
             </div>
             <?php else :; ?>
             <div>
-                You Could buy a test kit for self-testing.
+                You could buy a test kit for self-testing.
             </div>
             <?php endif; ?>
         </div>
