@@ -51,6 +51,7 @@ nav ul {
   list-style: none;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 
 nav ul li {
